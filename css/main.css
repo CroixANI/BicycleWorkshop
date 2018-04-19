@@ -1,0 +1,78 @@
+html, body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+.visually-hidden {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px;
+    width: 1px; 
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+/* Flex контейнер заголовка */
+.page-header {  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 90px;
+
+    font-weight: bold;
+    font-size: 14px;
+    color: #f9f9f9;
+    background-color: #181d24;
+}
+
+    .page-header .logo {
+        flex-basis: 320px;
+    }
+
+    .page-header .menu {
+        flex-grow: 8;
+    }
+
+    .page-header .contacts {
+        flex-grow: 1;
+    }
+
+.page-footer {
+    min-height: 90px;
+
+    background-color: #262626;
+}
+
+.section-image {
+    width: 100%;
+}
+
+.section-content {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 60px;
+
+    text-align: center;
+}
+
+.contacts-button {
+    display: inline-block;
+    padding: 12px 18px;
+    vertical-align: middle;
+
+    font-weight: normal;
+    text-decoration: none;
+    background-color: transparent;
+    box-shadow: none;
+    border: 2px solid #da0b0b;
+    color: #da0b0b;
+}
+
+    .contacts-button:hover {
+       color: white;
+       background-color: #da0b0b;
+    }
