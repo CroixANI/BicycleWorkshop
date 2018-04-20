@@ -10,6 +10,17 @@ ul, li {
     margin: 0;
 }
 
+.parallax {
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .visually-hidden {
     position: absolute; 
     overflow: hidden; 
@@ -199,4 +210,16 @@ ul, li {
     .menu .menuToggle {
         display: inline-block;
     }
+}
+
+.first-image {
+    background-image: url("../images/first-image.jpg");
+}
+
+.second-image {
+    background-image: url("../images/second-image.jpg");
+}
+
+.third-image {
+    background-image: url("../images/third-image.jpg")
 }
