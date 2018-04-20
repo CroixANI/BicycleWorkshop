@@ -12,11 +12,11 @@ ul, li {
 
 .parallax {
     /* Set a specific height */
-    min-height: 500px; 
+    min-height: 600px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: center;
+    background-position: 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -134,6 +134,7 @@ ul, li {
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
+    flex-wrap: wrap;
 }
 
     .contact-us .contact-us-address {
@@ -145,8 +146,12 @@ ul, li {
     }
 
     .contact-us .contact-us-map {
-        flex-grow: 3;
+        
     }
+
+        .contact-us .contact-us-map iframe {
+            
+        }
 
 .menu {
     display: flex;
@@ -195,7 +200,7 @@ ul, li {
         cursor: pointer;
     }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
     .menu ul {
         display: none;
         position: absolute;
