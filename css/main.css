@@ -12,11 +12,11 @@ ul, li {
 
 .parallax {
     /* Set a specific height */
-    min-height: 600px; 
+    min-height: 500px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: 50% 0;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -150,13 +150,11 @@ ul, li {
     }
 
         .contact-us .contact-us-map iframe {
-            
+
         }
 
 .menu {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
+    text-align: right;
     position: relative;
 }
 
@@ -178,6 +176,10 @@ ul, li {
             background-color: #da0b0b;
         }
 
+    .menu ul {
+        padding: 10px;
+    }
+
     .menu ul,
     .menu li {
         list-style-type: none;
@@ -187,8 +189,7 @@ ul, li {
         float: left;
     }
 
-    .menu li a,
-    .menu .menuToggle {
+    .menu li a {
         display: inline-block;
         padding: 10px 15px;
         text-decoration: none;
@@ -198,9 +199,10 @@ ul, li {
     .menu .menuToggle {
         display: none;
         cursor: pointer;
+        padding: 10px 15px;
     }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
     .menu ul {
         display: none;
         position: absolute;
@@ -215,6 +217,10 @@ ul, li {
     .menu .menuToggle {
         display: inline-block;
     }
+
+    .parallax {
+        background-attachment: inherit;
+    }
 }
 
 .first-image {
@@ -227,4 +233,20 @@ ul, li {
 
 .third-image {
     background-image: url("../images/third-image.jpg")
+}
+
+.menu-icon {
+    display: block;
+    width: 24px;
+    height: 18px;
+    stroke-width: 1;
+    stroke: #fff;
+}
+
+.close-icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    stroke-width: 1;
+    stroke: #fff;
 }
