@@ -68,7 +68,7 @@ ul, li {
 }
 
     .page-header .logo {
-        flex-basis: 320px;
+
     }
 
     .page-header .logo a {
@@ -102,8 +102,13 @@ ul, li {
     text-align: center;
 }
 
-    .section-content h2 {
+    section > .header,
+    .section-content .header {
         font-size: 40px;
+        font-weight: bold;
+        padding-bottom: 40px;
+        text-transform: uppercase;
+        text-align: center;
     }
 
     .section-content div {
@@ -134,27 +139,39 @@ ul, li {
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
-    flex-wrap: wrap;
 }
 
     .contact-us .contact-us-address {
-        
+        flex-grow: 1;
     }
 
     .contact-us .contact-us-photo {
-        
+        flex-grow: 2;
     }
 
-    .contact-us .contact-us-map {
-        
+    .contact-us .contact-us-photo img {
+        width: 100%;
     }
 
-        .contact-us .contact-us-map iframe {
+.contact-us-map {
+    overflow:hidden;
+    padding-bottom:35%;
+    position:relative;
+    height:0;
+}
 
-        }
+    .contact-us-map iframe {
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
 
 .menu {
-    text-align: right;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
     position: relative;
 }
 
@@ -176,9 +193,7 @@ ul, li {
             background-color: #da0b0b;
         }
 
-    .menu ul {
-        padding: 10px;
-    }
+    
 
     .menu ul,
     .menu li {
@@ -200,6 +215,7 @@ ul, li {
         display: none;
         cursor: pointer;
         padding: 10px 15px;
+        z-index: 100;
     }
 
 @media screen and (max-width: 800px) {
@@ -208,6 +224,10 @@ ul, li {
         position: absolute;
         width: 100%;
         background-color: #181d24;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-top: 50px;
     }
 
     .menu li {
@@ -220,6 +240,18 @@ ul, li {
 
     .parallax {
         background-attachment: inherit;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .parallax {
+        min-height: 300px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .parallax {
+        min-height: 250px;
     }
 }
 
