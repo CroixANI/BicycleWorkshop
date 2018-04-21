@@ -3,16 +3,6 @@ html, body {
     padding: 0;
 
     font-family: Arial,Helvetica,sans-serif;
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-
-    /* the whole body is not scollabel, 
-    but main content will have scrolling */
-    overflow: hidden; 
 }
 
 ul, li {
@@ -55,15 +45,23 @@ ul, li {
     flex-shrink: 0;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     min-height: 90px;
-    padding: 0 20px;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100%;
 
     font-weight: bold;
     font-size: 14px;
     color: #f9f9f9;
     background-color: #181d24;
 }
+    .page-header .logo {
+        flex-grow: 1;
+        justify-content: flex-start;
+        padding-left: 20px;   
+    }
 
     .page-header .logo .dark-font {
         font-weight: normal;
@@ -85,64 +83,57 @@ ul, li {
         color: inherit;
     }
 
-/* Page Header Styles - Top Menu */
-.menu {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    position: relative;
-}
-
-    .menu ul .contacts-button {
-        display: inline-block;
-        padding: 12px 18px;
-        vertical-align: middle;
-
-        font-weight: normal;
-        text-decoration: none;
-        background-color: transparent;
-        box-shadow: none;
-        border: 2px solid #da0b0b;
-        color: #da0b0b;
+    /* Page Header Styles - Top Menu */
+    .page-header .menu {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        flex-grow: 1;
+        position: relative;
+        padding-right: 20px;
     }
 
-        .menu ul .contacts-button:hover {
-            color: white;
-            background-color: #da0b0b;
+        .page-header .menu ul .contacts-button {
+            display: inline-block;
+            padding: 12px 18px;
+            vertical-align: middle;
+
+            font-weight: normal;
+            text-decoration: none;
+            background-color: transparent;
+            box-shadow: none;
+            border: 2px solid #da0b0b;
+            color: #da0b0b;
         }
 
-    .menu ul,
-    .menu li {
-        list-style-type: none;
-    }
+            .page-header .menu ul .contacts-button:hover {
+                color: white;
+                background-color: #da0b0b;
+            }
 
-    .menu li {
-        float: left;
-    }
+        .page-header .menu ul,
+        .page-header .menu li {
+            list-style-type: none;
+        }
 
-    .menu li a {
-        display: inline-block;
-        padding: 10px 15px;
-        text-decoration: none;
-        color: inherit;
-    }
+        .page-header .menu li {
+            float: left;
+        }
 
-    .menu .menuToggle {
-        display: none;
-        cursor: pointer;
-        padding: 10px 15px;
-        background: transparent;
-        z-index: 100;
-    }
+        .page-header .menu li a {
+            display: inline-block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: inherit;
+        }
 
-/* Scollable Main Content Styles */
-.main-content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 1;
-    overflow-y: auto;
-}
+        .page-header .menu .menuToggle {
+            display: none;
+            cursor: pointer;
+            padding: 10px 15px;
+            background: transparent;
+            z-index: 100;
+        }
 
 /* Page Footer Styles */
 .page-footer {
@@ -244,7 +235,7 @@ ul, li {
     }
 
 @media screen and (max-width: 800px) {
-    .menu ul {
+    .page-header .menu ul {
         display: none;
         position: absolute;
         background-color: #181d24;
@@ -254,11 +245,11 @@ ul, li {
         padding-top: 50px;
     }
 
-    .menu li {
+    .page-header .menu li {
         float: none;
     }
 
-    .menu .menuToggle {
+    .page-header .menu .menuToggle {
         display: inline-block;
     }
 
