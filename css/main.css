@@ -140,6 +140,9 @@ ul, li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+    flex-wrap: wrap;
     min-height: 90px;
     padding: 20px;
     font-size: 14px;
@@ -224,7 +227,14 @@ ul, li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-content: stretch;
+    flex-wrap: wrap;
 }
+
+    .feature-item {
+        flex-grow: 1;
+        max-width: 230px;
+    }
 
     .feature-item h3 {
         position: relative;
@@ -326,6 +336,10 @@ ul, li {
 @media screen and (max-width: 550px) {
     .parallax {
         min-height: 300px;
+    }
+
+    .feature-item {
+        max-width: unset;
     }
 }
 
