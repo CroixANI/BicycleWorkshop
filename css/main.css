@@ -131,6 +131,7 @@ ul, li {
         display: none;
         cursor: pointer;
         padding: 10px 15px;
+        background: transparent;
         z-index: 100;
     }
 
